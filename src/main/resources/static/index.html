@@ -184,12 +184,17 @@
 				}),
 				contentType : "application/json; charset=utf-8",
 				success : function(response) {
-					$("#id").val(response.id);
+					// $("#id").val(response.id); 
 					alert("Salvo com sucesso!");
+					
+					
 				}
+				
 			}).fail(function(xhr, status, errorThrown) {
 				alert("Erro ao salvar: " + xhr.responseText);
 			});
+			document.getElementById('formCadastroUser').reset();
+			
 		}
 
 		function deleteUser(id) {
@@ -223,6 +228,8 @@
 				document.getElementById('formCadastroUser').reset();
 			}
 		}
+		
+		
 	</script>
 </body>
 </html>
